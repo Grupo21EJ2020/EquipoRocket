@@ -18,11 +18,25 @@ class Cursos_Temas:
             archivo.close
 
      #Se agrega la informacion al archivo empleados.txt
-class Info():
-    def __init__(self, idEmpleado, Nombre, Direccion):
-        self.idEmpleado = idEmpleado
-        self.Nombre = Nombre 
-        self.Direccion = Direccion  
+global lista
+lista = list()
+class Info:
+    Empleado:
+    idEmpleado = ""
+    Nombre = ""
+    Direccion = ""  
+def AgregarEmpleado():
+    print "Registro de Empleado"
+    e = Empleado()
+    
+    e.idEmpleado = input("Ingrese el Id Nuevo:")
+    e.Nombre = raw_input("Ingrese el Nombre:")
+    e.Direccion = raw_input("Ingrese la direccion del empleado:")
+
+    lista.append (e)
+
+def buscarEmpleado():
+    print "Busqueda del Empleado"
 
 archivo = open("./archivos/empleados.txt","a",encoding='utf8')
 
@@ -32,6 +46,16 @@ Direccion = input("Direccion del Empleado:\n")
 
 archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
 archivo.close()
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,37 +224,4 @@ class Video:
         self.__fechapublicacion=valor
     @url.setter
     def url (self,valor):
-<<<<<<< HEAD
         self.__url = valor
-    
-
-class Info():
-    def __init__(self, idEmpleado, Nombre, Direccion):
-        self.idEmpleado = idEmpleado
-        self.Nombre = Nombre 
-        self.Direccion = Direccion  
-
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
-
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
-
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
-archivo.close()
-
-class temas:
-    def __init__(self,IdTema,Tema)
-    self.IdTema = IdTema
-    self.Tema = Tema
-
-archivo = open("./archivos/temas.txt","a",encoding='utf8')
-
-IdTema = input("Numero de registro del tema:\n")
-Tema = input("Nombre del Tema:\n")
-
-archivo.write(IdTema + "|" + Tema)
-archivo.close()
-=======
-        self.__url = valor
->>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
