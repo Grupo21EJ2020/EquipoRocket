@@ -121,7 +121,7 @@ def menu_principal():
         else:
             print("Opcion no valida")
 
-<<<<<<< HEAD
+
 
 class Video:
     def __init__(self,idVideo,nombre,fechapublicacion,url):
@@ -184,4 +184,4 @@ Direccion = input("Direccion del Empleado:\n")
 
 archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
 archivo.close()
->>>>>>> 6ffb88122d95f7d3221a7b07cf14857a09f0b847
+
