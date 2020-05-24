@@ -25,6 +25,19 @@ class Cursos_Temas:
 
         archivo.close()
 
+    def detalles_curso_tema():
+        archivo = open("./archivos/cursos_temas.txt",encoding="utf8")
+
+        print("Dime el id que buscas")
+        id_buscar = input("> ")
+
+        for renglon in archivo:
+            for x in renglon:
+                if id_buscar != x:
+                    break
+                else:
+                    print(renglon)
+
 
      #Se agrega la informacion al archivo empleados.txt
 class Info():
