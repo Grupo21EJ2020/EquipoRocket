@@ -15,7 +15,23 @@ class Cursos_Temas:
         idtema = input("> ")
 
         archivo.write(idcursotema + "|" + idcurso + "|" + idtema)
-        archivo.close
+            archivo.close
+
+     #Se agrega la informacion al archivo empleados.txt
+class Info():
+    def __init__(self, idEmpleado, Nombre, Direccion):
+        self.idEmpleado = idEmpleado
+        self.Nombre = Nombre 
+        self.Direccion = Direccion  
+
+archivo = open("./archivos/empleados.txt","a",encoding='utf8')
+
+idEmpleado = input("Numero de registro:\n")
+Nombre = input("Nombre del Empleado:\n")
+Direccion = input("Direccion del Empleado:\n")
+
+archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
+archivo.close()
 
 
 
@@ -184,6 +200,7 @@ class Video:
         self.__fechapublicacion=valor
     @url.setter
     def url (self,valor):
+<<<<<<< HEAD
         self.__url = valor
     
 
@@ -214,3 +231,6 @@ Tema = input("Nombre del Tema:\n")
 
 archivo.write(IdTema + "|" + Tema)
 archivo.close()
+=======
+        self.__url = valor
+>>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
