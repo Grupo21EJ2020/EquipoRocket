@@ -15,7 +15,16 @@ class Cursos_Temas:
         idtema = input("> ")
 
         archivo.write(idcursotema + "|" + idcurso + "|" + idtema)
-            archivo.close
+        
+        archivo.close()
+
+    def consultar_curso_tema():
+        archivo = open("./archivos/cursos_temas.txt",encoding="utf8")
+
+        print(archivo.read())
+
+        archivo.close()
+
 
      #Se agrega la informacion al archivo empleados.txt
 class Info():
