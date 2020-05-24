@@ -1,9 +1,30 @@
+class Cursos_Temas:
+    def __init__(self,idCursoTema,idCurso,idTema):
+        self.idCursoTema = idCursoTema
+        self.idCurso = idCurso
+        self.idTema = idTema
+    
+    def agregar_curso_tema():
+        archivo = open("./archivos/cursos_temas.txt","a",encoding="utf8")
+        
+        print("Dime el id del tema del curso")
+        idcursotema = input("> ")
+        print("Dime el id del curso")
+        idcurso = input("> ")
+        print("Dime el id del tema")
+        idtema = input("> ")
+
+        archivo.write(idcursotema + "|" + idcurso + "|" + idtema)
+        archivo.close
+
+
+
 def opciones_modificacion():
     print("¿Que opcion quieres realizar?")
     print("1. Agregar")
     print("2. Borrar")
     print("3. Modificar")
-    print("4. Consultar todo")
+    print("4. Consultar todos los registros")
     print("5. Ver detalles")
 
 def menu_principal():
@@ -117,7 +138,7 @@ def menu_principal():
 
         elif opcion == 7:
             break
-        
+
         else:
             print("Opcion no valida")
 
