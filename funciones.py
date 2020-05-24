@@ -186,11 +186,7 @@ class Video:
     def url (self,valor):
         self.__url = valor
     
-        
-    
 
-=======
-#Se agrega la informacion al archivo empleados.txt
 class Info():
     def __init__(self, idEmpleado, Nombre, Direccion):
         self.idEmpleado = idEmpleado
@@ -206,3 +202,15 @@ Direccion = input("Direccion del Empleado:\n")
 archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
 archivo.close()
 
+class temas:
+    def __init__(self,IdTema,Tema)
+    self.IdTema = IdTema
+    self.Tema = Tema
+
+archivo = open("./archivos/temas.txt","a",encoding='utf8')
+
+IdTema = input("Numero de registro del tema:\n")
+Tema = input("Nombre del Tema:\n")
+
+archivo.write(IdTema + "|" + Tema)
+archivo.close()
