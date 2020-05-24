@@ -15,7 +15,29 @@ class Cursos_Temas:
         idtema = input("> ")
 
         archivo.write(idcursotema + "|" + idcurso + "|" + idtema)
-            archivo.close
+        
+        archivo.close()
+
+    def consultar_curso_tema():
+        archivo = open("./archivos/cursos_temas.txt",encoding="utf8")
+
+        print(archivo.read())
+
+        archivo.close()
+
+    def detalles_curso_tema():
+        archivo = open("./archivos/cursos_temas.txt",encoding="utf8")
+
+        print("Dime el id que buscas")
+        id_buscar = input("> ")
+
+        for renglon in archivo:
+            for x in renglon:
+                if id_buscar != x:
+                    break
+                else:
+                    print(renglon)
+
 
      #Se agrega la informacion al archivo empleados.txt
 global lista
@@ -224,4 +246,36 @@ class Video:
         self.__fechapublicacion=valor
     @url.setter
     def url (self,valor):
+<<<<<<< HEAD
         self.__url = valor
+=======
+        self.__url = valor
+
+class Info():
+    def __init__(self, idEmpleado, Nombre, Direccion):
+        self.idEmpleado = idEmpleado
+        self.Nombre = Nombre 
+        self.Direccion = Direccion  
+
+archivo = open("./archivos/empleados.txt","a",encoding='utf8')
+
+idEmpleado = input("Numero de registro:\n")
+Nombre = input("Nombre del Empleado:\n")
+Direccion = input("Direccion del Empleado:\n")
+
+archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
+archivo.close()
+
+class temas:
+    def __init__(self,IdTema,Tema)
+    self.IdTema = IdTema
+    self.Tema = Tema
+
+archivo = open("./archivos/temas.txt","a",encoding='utf8')
+
+IdTema = input("Numero de registro del tema:\n")
+Tema = input("Nombre del Tema:\n")
+
+archivo.write(IdTema + "|" + Tema)
+archivo.close()
+>>>>>>> 53dedf045abc2fd0cfe24d774aa2ebb48410ccdd
