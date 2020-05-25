@@ -1,39 +1,4 @@
-class Cursos_Temas:
-    def __init__(self,idCursoTema,idCurso,idTema):
-        self.idCursoTema = idCursoTema
-        self.idCurso = idCurso
-        self.idTema = idTema
-    
-    def agregar_curso_tema():
-        archivo = open("./archivos/cursos_temas.txt","a",encoding="utf8")
-        
-        print("Dime el id del tema del curso")
-        idcursotema = input("> ")
-        print("Dime el id del curso")
-        idcurso = input("> ")
-        print("Dime el id del tema")
-        idtema = input("> ")
-
-        archivo.write(idcursotema + "|" + idcurso + "|" + idtema)
-            archivo.close
-
-     #Se agrega la informacion al archivo empleados.txt
-class Info():
-    def __init__(self, idEmpleado, Nombre, Direccion):
-        self.idEmpleado = idEmpleado
-        self.Nombre = Nombre 
-        self.Direccion = Direccion  
-
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
-
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
-
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
-archivo.close()
-
-
+#ESTE ES EL MENU DEL PROGRAMA
 
 def opciones_modificacion():
     print("¿Que opcion quieres realizar?")
@@ -160,6 +125,7 @@ def menu_principal():
 
 
 
+<<<<<<< HEAD
 class Video:
     def __init__(self,idVideo,nombre,fechapublicacion,url):
         self.__idVideo = idVideo 
@@ -203,20 +169,15 @@ class Video:
         self.__url = valor
     
 
+=======
+>>>>>>> 1cbabb5264d8001083fdbdb6a19f98ab0ba27107
 class Info():
     def __init__(self, idEmpleado, Nombre, Direccion):
         self.idEmpleado = idEmpleado
         self.Nombre = Nombre 
         self.Direccion = Direccion  
 
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
 
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
-
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
-archivo.close()
 
 class temas:
     def __init__(self,IdTema,Tema)
@@ -230,3 +191,25 @@ Tema = input("Nombre del Tema:\n")
 
 archivo.write(IdTema + "|" + Tema)
 archivo.close()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        self.__url = valor
+>>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
+
+archivo = open ("./archivo/video.txt","a",encoding = 'utf8')
+
+idVideo = (input ("clave del video"))
+nombre=input("nombre del video")
+fechadepublicacion=input("fecha de publicacion del video")
+url = input("Dame tu url del video")
+archivo.write(idVideo + "|" + nombre + "|" + fechadepublicacion + "|" + url)
+archivo.close()
+
+
+=======
+>>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
+
+
+>>>>>>> 1cbabb5264d8001083fdbdb6a19f98ab0ba27107
