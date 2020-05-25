@@ -200,7 +200,6 @@ class Video:
         self.__fechapublicacion=valor
     @url.setter
     def url (self,valor):
-<<<<<<< HEAD
         self.__url = valor
     
 
@@ -231,6 +230,3 @@ Tema = input("Nombre del Tema:\n")
 
 archivo.write(IdTema + "|" + Tema)
 archivo.close()
-=======
-        self.__url = valor
->>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec

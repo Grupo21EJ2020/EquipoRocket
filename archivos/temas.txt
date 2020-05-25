@@ -1,0 +1,4 @@
+print("Dame un Id Para el tema: )
+IdTema = int()
+print("Cual es el nombre del tema: ")
+Tema = input(int())
