@@ -222,8 +222,9 @@ class Video:
         self.__fechapublicacion=valor
     @url.setter
     def url (self,valor):
-<<<<<<< HEAD
         self.__url = valor
+    
+    
     
 
 class Info():
@@ -256,3 +257,12 @@ archivo.close()
 =======
         self.__url = valor
 >>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
+
+archivo = open ("./archivo/video.txt","a",encoding = 'utf8')
+
+idVideo = (input ("clave del video"))
+nombre=input("nombre del video")
+fechadepublicacion=input("fecha de publicacion del video")
+url = input("Dame tu url del video")
+archivo.write(idVideo + "|" + nombre + "|" + fechadepublicacion + "|" + url)
+archivo.close()
