@@ -42,11 +42,31 @@ class Video:
         self.__url = valor
 
 
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
-
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
-
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
+archivo = open ("./archivo/video.txt","a",encoding = 'utf8')
+idVideo = int (input ("clave del video"))
+nombre=input("nombre del video")
+fechadepublicacion=input("fecha de publicacion del video")
+url = input("Dame tu url del video")
+archivo.write(idVideo + "/" + nombre + "/" + fechadepublicacion + "/" + url)
 archivo.close()
+
+    def  consultar_video ():
+        archivo  =  open ( "./archivos/video.txt" , encoding = "utf8" )
+
+        print ( archivo . read ())
+
+        archivo . close ()
+
+
+    def  detalle_video ():
+        archivo  =  abierto ( "./archivos/empleados.txt" , codificación = "utf8" )
+
+        print ( "Id del video a buscar" )
+        idVideo earch  =  input ( "Nombre del video:" )
+
+        for  renglon  in  archivo :
+            for   x  in  renglon :
+                if  id_empleadosearch  ! =  x :
+                    break
+                else :
+                    imprimir ( renglon )
