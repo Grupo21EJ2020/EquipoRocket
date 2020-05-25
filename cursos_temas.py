@@ -70,5 +70,22 @@ class Curso_Tema:
         os.remove("./archivos/cursos_temas.txt")
         os.rename("./archivos/cursos_temas_temp.txt","./archivos/cursos_temas.txt")
 
+    def borrar_curso_tema():
+        archivo = open("./archivos/cursos_temas.txt","r",encoding="utf8")
+        archivo_temp = open("./archivos/cursos_temas_temp.txt","w",encoding="utf8")
 
-Curso_Tema.agregar_curso_tema()
+        print("Dime el id que quieres borrar")
+        id_borrar = input("> ")
+
+        for renglon in archivo:
+            for x in renglon:
+                if id_borrar != x:
+                    archivo_temp.write(renglon)
+                    break
+                elif id_borrar == x:
+                    break
+    
+        archivo.close()
+        archivo_temp.close()
+        os.remove("./archivos/cursos_temas.txt")
+        os.rename("./archivos/cursos_temas_temp.txt","./archivos/cursos_temas.txt")
