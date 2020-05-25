@@ -197,69 +197,13 @@ def menu_principal():
 
 
 
-class Video:
-    def __init__(self,idVideo,nombre,fechapublicacion,url):
-        self.__idVideo = idVideo 
-        self.__nombre = nombre
-        self.__fechapublicacion = fechapublicacion
-        self.__url= url
-    
-    def fromstring(cls,cadena):
-        idVideo,nombre,fechapublicacion,url = cadena.split(",")
-        return cls (int(idVideo),nombre,str(fechapublicacion),url)
-    def fromstring(cls,lista):
-        idVideo,nombre,fechapublicacion,url = lista.join(" ")
-        return cls (int(idVideo),nombre,str(fechapublicacion),url)
-    
-    @property
-    def idVideo(self):
-        return self.__idVideo
-    @property
-    def nombre (self):
-        return self.__nombre
-    @property
-    def fechapublicacion (self):
-        return self.__fechapublicacion
-    @property
-    def url (self):
-        return self.__url
-    
-    @idVideo.setter
-    def idVideo(self,valor):
-        self.__idVideo = valor
-        
-    @nombre.setter
-    def nombre (self,valor):
-        self.__nombre=valor
-    
-    @fechapublicacion.setter
-    def fechapublicacion (self,valor):
-        self.__fechapublicacion=valor
-    @url.setter
-    def url (self,valor):
-        self.__url = valor
-<<<<<<< HEAD
-    
-    
-    
-=======
-        self.__url = valor
->>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
-
 class Info():
     def __init__(self, idEmpleado, Nombre, Direccion):
         self.idEmpleado = idEmpleado
         self.Nombre = Nombre 
         self.Direccion = Direccion  
 
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
 
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
-
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
-archivo.close()
 
 class temas:
     def __init__(self,IdTema,Tema)
@@ -286,5 +230,9 @@ fechadepublicacion=input("fecha de publicacion del video")
 url = input("Dame tu url del video")
 archivo.write(idVideo + "|" + nombre + "|" + fechadepublicacion + "|" + url)
 archivo.close()
+
+
 =======
 >>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
+
+
