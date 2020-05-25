@@ -4,27 +4,17 @@ class Curso():
         self.descripcion = descripcion
         self.idEmpleado=idEmpleado
         
-    @property
-    def idCurso(self):
-        return self.__idCurso
-    
-    @idCurso.setter
-    def idCurso(self,valor):
-        self.__idCurso = valor
-    
-    @property
-    def descripcion(self):
-        return self.__descripcion
-    
-    @descripcion.setter
-    def descripcion(self,valor):
-        self.__descripcion = valor
-        
-    @property
-    def idEmpleado(self):
-        return self.__idEmpleado
-    
-    @idEmpleado.setter
-    def idEmpleado(self,valor):
-        self.__idEmpleado = valor
+    def agregar_curso():
+        archivo = open("./archivos/cursos.txt","a", encoding='utf8')
 
+        print("Dime el id del curso")
+        idCurso = int(input("> "))
+        print("Dime la descripcion")
+        descripcion = input("> ")
+        print("Dime el id del empleado")
+        idEmpleado = int(input("> "))
+
+        archivo.write(idCurso + "|" + descripcion + "|" idEmpleado)
+        
+        archivo.close()
+    
