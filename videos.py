@@ -69,4 +69,5 @@ archivo.close()
                 if  id_empleadosearch  ! =  x :
                     break
                 else :
-                    imprimir ( renglon )
+                    print ( renglon )
+    
