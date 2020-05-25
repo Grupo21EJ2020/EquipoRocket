@@ -17,4 +17,11 @@ class Curso():
         archivo.write(idCurso + "|" + descripcion + "|" idEmpleado)
         
         archivo.close()
-    
+
+        
+    def consultar_curso_():
+        archivo = open("./archivos/cursos.txt",encoding="utf8")
+
+        print(archivo.read())
+
+        archivo.close()
