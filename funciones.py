@@ -40,44 +40,35 @@ class Cursos_Temas:
 
 
      #Se agrega la informacion al archivo empleados.txt
-global lista
-lista = list()
-class Info:
-    Empleado:
-    idEmpleado = ""
-    Nombre = ""
-    Direccion = ""  
-def AgregarEmpleado():
-    print "Registro de Empleado"
-    e = Empleado()
-    
-    e.idEmpleado = input("Ingrese el Id Nuevo:")
-    e.Nombre = raw_input("Ingrese el Nombre:")
-    e.Direccion = raw_input("Ingrese la direccion del empleado:")
 
-    lista.append (e)
+class Info_Empleado:
+    def __init__(self,idEmpleado,Nombre,Direccion):
+        self.idEmpleado = idEmpleado
+        self.Nombre = Nombre
+        self.Direccion = Direccion 
 
-def buscarEmpleado():
-    print "Busqueda del Empleado"
+    def AgregarEmpleado():
+        print "Registro de Empleado"
+        archivo = open("./archivos/empleados.txt","a",encoding="utf8")
 
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
+        print("Clave del Empleado Nuevo")
+        idempleado = input("Id \n")
+        print("Nombre del Empleado:\n")
+        nombre = input("Nombre: \n")
+        print("Direccion del Empleado")
+        direccion = input("> ")
 
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
-
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
-archivo.close()
+        archivo.write(idempleado + "|" + nombre + "|" + direccion)
+        
+        archivo.close()
 
 
+    def consultar_empleado():
+        archivo = open("./archivos/empleados.txt",encoding="utf8")
 
+        print(archivo.read())
 
-
-
-
-
-
-
+        archivo.close()
 
 
 
