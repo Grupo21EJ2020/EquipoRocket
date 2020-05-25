@@ -33,7 +33,7 @@ class Info_Empleado:
     def detalle_empleado():
         archivo = open("./archivos/empleados.txt",encoding="utf8")
 
-        print("Id del Empleado a buscar")
+        print("Id del Empleado a buscar:")
         id_empleadosearch = input("Empleado:")
 
         for renglon in archivo:
