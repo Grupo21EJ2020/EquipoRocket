@@ -40,20 +40,35 @@ class Cursos_Temas:
 
 
      #Se agrega la informacion al archivo empleados.txt
-class Info():
-    def __init__(self, idEmpleado, Nombre, Direccion):
+
+class Info_Empleado:
+    def __init__(self,idEmpleado,Nombre,Direccion):
         self.idEmpleado = idEmpleado
-        self.Nombre = Nombre 
-        self.Direccion = Direccion  
+        self.Nombre = Nombre
+        self.Direccion = Direccion 
 
-archivo = open("./archivos/empleados.txt","a",encoding='utf8')
+    def AgregarEmpleado():
+        print "Registro de Empleado"
+        archivo = open("./archivos/empleados.txt","a",encoding="utf8")
 
-idEmpleado = input("Numero de registro:\n")
-Nombre = input("Nombre del Empleado:\n")
-Direccion = input("Direccion del Empleado:\n")
+        print("Clave del Empleado Nuevo")
+        idempleado = input("Id \n")
+        print("Nombre del Empleado:\n")
+        nombre = input("Nombre: \n")
+        print("Direccion del Empleado")
+        direccion = input("> ")
 
-archivo.write(idEmpleado + "|" + Nombre + "|" + Direccion)
-archivo.close()
+        archivo.write(idempleado + "|" + nombre + "|" + direccion)
+        
+        archivo.close()
+
+
+    def consultar_empleado():
+        archivo = open("./archivos/empleados.txt",encoding="utf8")
+
+        print(archivo.read())
+
+        archivo.close()
 
 
 
@@ -223,9 +238,13 @@ class Video:
     @url.setter
     def url (self,valor):
         self.__url = valor
+<<<<<<< HEAD
     
     
     
+=======
+        self.__url = valor
+>>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
 
 class Info():
     def __init__(self, idEmpleado, Nombre, Direccion):
@@ -254,6 +273,7 @@ Tema = input("Nombre del Tema:\n")
 
 archivo.write(IdTema + "|" + Tema)
 archivo.close()
+<<<<<<< HEAD
 =======
         self.__url = valor
 >>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
@@ -266,3 +286,5 @@ fechadepublicacion=input("fecha de publicacion del video")
 url = input("Dame tu url del video")
 archivo.write(idVideo + "|" + nombre + "|" + fechadepublicacion + "|" + url)
 archivo.close()
+=======
+>>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
