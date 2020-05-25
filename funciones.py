@@ -205,7 +205,13 @@ class Video:
     @url.setter
     def url (self,valor):
         self.__url = valor
+<<<<<<< HEAD
+    
+    
+    
+=======
         self.__url = valor
+>>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
 
 class Info():
     def __init__(self, idEmpleado, Nombre, Direccion):
@@ -234,3 +240,18 @@ Tema = input("Nombre del Tema:\n")
 
 archivo.write(IdTema + "|" + Tema)
 archivo.close()
+<<<<<<< HEAD
+=======
+        self.__url = valor
+>>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
+
+archivo = open ("./archivo/video.txt","a",encoding = 'utf8')
+
+idVideo = (input ("clave del video"))
+nombre=input("nombre del video")
+fechadepublicacion=input("fecha de publicacion del video")
+url = input("Dame tu url del video")
+archivo.write(idVideo + "|" + nombre + "|" + fechadepublicacion + "|" + url)
+archivo.close()
+=======
+>>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
