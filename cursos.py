@@ -1,3 +1,4 @@
+import os
 class Curso():
     def __init__(self, idCurso, descripcion, idEmpleado):
         self.idCurso = idCurso
