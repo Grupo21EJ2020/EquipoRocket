@@ -125,7 +125,6 @@ def menu_principal():
 
 
 
-<<<<<<< HEAD
 class Video:
     def __init__(self,idVideo,nombre,fechapublicacion,url):
         self.__idVideo = idVideo 
@@ -169,8 +168,6 @@ class Video:
         self.__url = valor
     
 
-=======
->>>>>>> 1cbabb5264d8001083fdbdb6a19f98ab0ba27107
 class Info():
     def __init__(self, idEmpleado, Nombre, Direccion):
         self.idEmpleado = idEmpleado
@@ -191,12 +188,6 @@ Tema = input("Nombre del Tema:\n")
 
 archivo.write(IdTema + "|" + Tema)
 archivo.close()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-        self.__url = valor
->>>>>>> 798c302c7e439c0d6e280d7d084ef5e99f4a8fec
 
 archivo = open ("./archivo/video.txt","a",encoding = 'utf8')
 
@@ -207,9 +198,3 @@ url = input("Dame tu url del video")
 archivo.write(idVideo + "|" + nombre + "|" + fechadepublicacion + "|" + url)
 archivo.close()
 
-
-=======
->>>>>>> 30ad0b7655b64b4eb358a42e7096e82232149264
-
-
->>>>>>> 1cbabb5264d8001083fdbdb6a19f98ab0ba27107
