@@ -20,14 +20,14 @@ class temas:
         self._Tema = valor
 
 
-def agregar_temas():
-    archivo = open ("./archivo/temas.txt","a",encoding = 'utf8')
+    def agregar_temas():
+        archivo = open ("./archivo/temas.txt","a",encoding = 'utf8')
 
-    idTema = int("Dime el ID que gustar ponerle al tema:  ")
-    Tema = input("Dime el nombre del Tema:   ")
+        idTema = int("Dime el ID que gustar ponerle al tema:  ")
+        Tema = input("Dime el nombre del Tema:   ")
 
-    archivo.write(idTema + "|" + Tema)
-    archivo.close()
+        archivo.write(idTema + "|" + Tema)
+        archivo.close()
 
     
 
