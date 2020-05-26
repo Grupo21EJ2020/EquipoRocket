@@ -46,3 +46,17 @@ class Curso():
         print(archivo.read())
 
         archivo.close()
+
+    def detalles_curso(self):
+        self.archivo = open("./archivos/cursos.txt",encoding="utf8")
+
+        print("Dime el id que buscas")
+        self.id_buscar = input("> ")
+
+        for renglon in self.archivo:
+            id = renglon.split("|")[0]
+            if self.id_buscar == id:
+                print(renglon)
+                break
+
+        self.archivo.close()
