@@ -123,8 +123,6 @@ def menu_principal():
         else:
             print("Opcion no valida")
 
-
-
 class Video:
     def __init__(self,idVideo,nombre,fechapublicacion,url):
         self.__idVideo = idVideo 

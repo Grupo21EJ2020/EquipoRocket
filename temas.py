@@ -19,6 +19,7 @@ class temas:
     def idtema(self,valor):
         self._Tema = valor
 
+
 def agregar_temas():
     archivo = open ("./archivo/temas.txt","a",encoding = 'utf8')
 
