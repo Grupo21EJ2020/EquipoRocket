@@ -34,16 +34,14 @@ class Curso_Tema:
         self.id_buscar = input("> ")
 
         for renglon in self.archivo:
-            for x in renglon:
-                if self.id_buscar != x:
-                    break
-                else:
-                    print(renglon)
-                    break
+            id = renglon.split("|")[0]
+            if self.id_buscar == id:
+                print(renglon)
+                break
 
         self.archivo.close()
 
-    def modificar_cursos_temas(self):
+    def modificar_curso_tema(self):
         self.archivo = open("./archivos/cursos_temas.txt","r",encoding="utf8")
         self.archivo_temp = open("./archivos/cursos_temas_temp.txt","w",encoding="utf8")
 
@@ -57,13 +55,11 @@ class Curso_Tema:
         self.idtema = input("> ")
 
         for renglon in self.archivo:
-            for x in renglon:
-                if self.id_mod != x:
-                    self.archivo_temp.write(renglon)
-                    break
-                elif self.id_mod == x:
-                    self.archivo_temp.write(self.idcursotema + "|" + self.idcurso + "|" + self.idtema + "\n")
-                    break
+            id = renglon.split("|")[0]
+            if self.id_mod != id:
+                self.archivo_temp.write(renglon)
+            elif self.id_mod == id:
+                self.archivo_temp.write(self.idcursotema + "|" + self.idcurso + "|" + self.idtema + "\n")
     
         self.archivo.close()
         self.archivo_temp.close()
@@ -78,12 +74,9 @@ class Curso_Tema:
         self.id_borrar = input("> ")
 
         for renglon in self.archivo:
-            for x in renglon:
-                if self.id_borrar != x:
-                    self.archivo_temp.write(renglon)
-                    break
-                elif self.id_borrar == x:
-                    break
+            id = renglon.split("|")[0]
+            if self.id_borrar != id:
+                self.archivo_temp.write(renglon)
     
         self.archivo.close()
         self.archivo_temp.close()
@@ -91,4 +84,4 @@ class Curso_Tema:
         os.rename("./archivos/cursos_temas_temp.txt","./archivos/cursos_temas.txt")
 
 A = Curso_Tema(0,0,0)
-A.detalles_curso_tema()
+A.borrar_curso_tema()
