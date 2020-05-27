@@ -97,5 +97,6 @@ class Info_Empleado:
         os.rename("./archivos/empleados_temp.txt","./archivos/empleados.txt")
 
 
-    
+I = Info_Empleado(0,0,0)
+I.borrar_Empleado()
 
