@@ -1,33 +1,18 @@
+import os
+
 class temas:
     def __init__(self,idtema,tema):
         self.idtema = idtema
         self.tema = tema
 
-    @property
-    def idTema(self):
-        return self.__idtema
-    
-    @idTema.setter
-    def idTema(self,valor):
-        self.__idtema = valor
+    def agregar_temas(self):
+        self.archivo = open ("./archivos/temas.txt","a",encoding = 'utf8')
 
-    @property
-    def tema(self):
-        return self.__tema
-    
-    @tema.setter
-    def idtema(self,valor):
-        self._tema = valor
+        self.idtema = input("Dime el ID que gustar ponerle al tema:  ")
+        self.tema = input("Dime el nombre del Tema:   ")
 
-
-    def agregar_temas():
-        archivo = open ("./archivo/temas.txt","a",encoding = 'utf8')
-
-        idtema = int("Dime el ID que gustar ponerle al tema:  ")
-        tema = input("Dime el nombre del Tema:   ")
-
-        archivo.write(idtema + "|" + tema)
-        archivo.close()
+        self.archivo.write(self.idtema + "|" + self.tema + "\n")
+        self.archivo.close()
 
     def consultar_temas(self):
         self.archivo = open("./archivos/temas.txt",encoding="utf8")
@@ -50,11 +35,14 @@ class temas:
 
     def modificar_tema(self):
         self.archivo = open("./archivos/temas.txt","r",encoding="utf8")
+        self.archivo_temp = open("./archivos/temas_temp.txt","w",encoding="utf8")
 
         print("Dime el id que quieres modificar")
         self.id_mod = input("> ")
         print("Dime el nuevo id del tema")
         self.idtema = input("> ")
+        print("Dime el nuevo tema")
+        self.tema = input("> ")
 
         for renglon in self.archivo:
             id = renglon.split("|")[0]
@@ -84,13 +72,5 @@ class temas:
         self.archivo_temp.close()
         os.remove("./archivos/temas.txt")
         os.rename("./archivos/temas_temp.txt","./archivos/temas.txt")
-
-A = tema(0,0)
-A.borrar_tema()
-
-    
-
-
-
 
 

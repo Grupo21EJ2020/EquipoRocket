@@ -1,9 +1,9 @@
-from cursos import Curso
-from empleados import Info_Empleado
-from videos import Video
-from temas import temas
-from cursos_temas import Curso_Tema
-from cursos_temas_videos import Curso_Tema_Video
+from cursos import *
+from empleados import *
+from videos import *
+from temas import *
+from cursos_temas import *
+from cursos_temas_videos import *
 import os
 
 C = Curso(0,0,0)
@@ -15,7 +15,9 @@ CTV = Curso_Tema_Video(0,0,0)
 
 #ESTE ES EL MENU DEL PROGRAMA
 
-def menu_principal:
+def menu_principal():
+    print("\n")
+    print("*"*50)
     print("Elige un archivo")
     print("1. Cursos")
     print("2. Empleados")
@@ -27,7 +29,9 @@ def menu_principal:
     opcion = int(input("> "))
     return opcion
 
-def menu_opciones:
+def menu_opciones():
+    print("\n")
+    print("*"*50)
     print("¿Que accion quieres realizar?")
     print("1. Agregar")
     print("2. Borrar")
@@ -40,11 +44,11 @@ def menu_opciones:
 #Aqui empieza el programa
 
 opcion1 = menu_principal()
+if opcion1 <= 6:
+        opcion2 = menu_opciones()
 
 while True:
-    if opcion1 != 7:
-        opcion2 = menu_opciones()
-    elif opcion1 == 1:
+    if opcion1 == 1:
         if opcion2 == 1:
             C.agregar_curso()
         elif opcion2 == 2:
@@ -117,10 +121,13 @@ while True:
             CTV.detalles_ctv()
         
     elif opcion1 == 7:
-        break
+        quit()
     
     else:
-        print("Opcion invalida")
+        print("\n")
+        print("===Opcion invalida===")
     
     opcion1 = menu_principal()
+    if opcion1 <= 6:
+        opcion2 = menu_opciones()
 

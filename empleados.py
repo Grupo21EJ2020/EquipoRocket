@@ -8,8 +8,7 @@ class Info_Empleado:
         self.Nombre = Nombre
         self.Direccion = Direccion 
 
-    def AgregarEmpleado():
-        print "Registro de Empleado"
+    def AgregarEmpleado(self):
         self.archivo = open("./archivos/empleados.txt","a",encoding="utf8")
 
         print("Clave del Empleado Nuevo")
@@ -21,12 +20,12 @@ class Info_Empleado:
         print("Direccion del Empleado")
         self.direccion = input("> ")
 
-        self.archivo.write(self.idempleado + "|" + self.nombre + "|" + self.direccion)
+        self.archivo.write(self.idempleado + "|" + self.nombre + "|" + self.direccion + "\n")
         
         self.archivo.close()
 
 
-    def consultar_empleado():
+    def consultar_empleado(self):
         self.archivo = open("./archivos/empleados.txt",encoding="utf8")
 
         print(self.archivo.read())
@@ -34,7 +33,7 @@ class Info_Empleado:
         self.archivo.close()
 
 
-    def detalle_empleado():
+    def detalle_empleado(self):
         self.archivo = open("./archivos/empleados.txt",encoding="utf8")
 
         print("Id del Empleado a buscar:")
@@ -42,7 +41,7 @@ class Info_Empleado:
 
         for renglon in self.archivo:
             id = renglon.split("|")[0]
-            if self.id_buscar == id:
+            if self.id_empleadosearch == id:
                 print(renglon)
                 break
 
@@ -97,6 +96,4 @@ class Info_Empleado:
         os.rename("./archivos/empleados_temp.txt","./archivos/empleados.txt")
 
 
-I = Info_Empleado(0,0,0)
-I.borrar_Empleado()
 

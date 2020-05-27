@@ -83,5 +83,3 @@ class Curso_Tema:
         os.remove("./archivos/cursos_temas.txt")
         os.rename("./archivos/cursos_temas_temp.txt","./archivos/cursos_temas.txt")
 
-A = Curso_Tema(0,0,0)
-A.borrar_curso_tema()
