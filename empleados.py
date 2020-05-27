@@ -69,11 +69,14 @@ class Info_Empleado:
             if self.id_change != id:
                 self.archivo_temporal.write(renglon)
             elif self.id_change == id:
-                self.archivo_temp.write(self.idempleado + "|" + self.nombre + "|" + self.direccion + "\n")
+                self.archivo_temporal.write(self.idempleado + "|" + self.nombre + "|" + self.direccion + "\n")
     
         self.archivo.close()
         self.archivo_temporal.close()
 
         os.remove("./archivos/empleados.txt")
         os.rename("./archivos/empleados_temp.txt","./archivos/empleados.txt")
+
+
+    
 
