@@ -78,5 +78,24 @@ class Info_Empleado:
         os.rename("./archivos/empleados_temp.txt","./archivos/empleados.txt")
 
 
+    def borrar_Empleado(self):
+        self.archivo = open("./archivos/empleados.txt","r",encoding="utf8")
+        self.archivo_temporal = open("./archivos/empleados_temp.txt","w",encoding="utf8")
+
+        print("ID a borrar")
+        self.id_delete = input("ID Del:")
+
+        for renglon in self.archivo:
+            id = renglon.split("|")[0]
+            if self.id_delete != id:
+                self.archivo_temporal.write(renglon)
+    
+        self.archivo.close()
+        self.archivo_temporal.close()
+
+        os.remove("./archivos/empleados.txt")
+        os.rename("./archivos/empleados_temp.txt","./archivos/empleados.txt")
+
+
     
 
