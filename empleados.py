@@ -1,5 +1,7 @@
 #Se agrega la informacion al archivo empleados.txt
 
+import os
+
 class Info_Empleado:
     def __init__(self,idEmpleado,Nombre,Direccion):
         self.idEmpleado = idEmpleado
@@ -8,37 +10,70 @@ class Info_Empleado:
 
     def AgregarEmpleado():
         print "Registro de Empleado"
-        archivo = open("./archivos/empleados.txt","a",encoding="utf8")
+        self.archivo = open("./archivos/empleados.txt","a",encoding="utf8")
 
         print("Clave del Empleado Nuevo")
-        idempleado = input("Id \n")
-        print("Nombre del Empleado:\n")
-        nombre = input("Nombre: \n")
-        print("Direccion del Empleado")
-        direccion = input("> ")
+        self.idempleado = input("Id \n")
 
-        archivo.write(idempleado + "|" + nombre + "|" + direccion)
+        print("Nombre del Empleado:\n")
+        self.nombre = input("Nombre: \n")
+
+        print("Direccion del Empleado")
+        self.direccion = input("> ")
+
+        self.archivo.write(self.idempleado + "|" + self.nombre + "|" + self.direccion)
         
-        archivo.close()
+        self.archivo.close()
 
 
     def consultar_empleado():
-        archivo = open("./archivos/empleados.txt",encoding="utf8")
+        self.archivo = open("./archivos/empleados.txt",encoding="utf8")
 
-        print(archivo.read())
+        print(self.archivo.read())
 
-        archivo.close()
+        self.archivo.close()
 
 
     def detalle_empleado():
-        archivo = open("./archivos/empleados.txt",encoding="utf8")
+        self.archivo = open("./archivos/empleados.txt",encoding="utf8")
 
         print("Id del Empleado a buscar:")
-        id_empleadosearch = input("Empleado:")
+        self.id_empleadosearch = input("Id Empleado:")
 
-        for renglon in archivo:
-            for x in renglon:
-                if id_empleadosearch != x:
-                    break
-                else:
-                    print(renglon)
+        for renglon in self.archivo:
+            id = renglon.split("|")[0]
+            if self.id_buscar == id:
+                print(renglon)
+                break
+
+        self.archivo.close()
+
+    def modificar_empleado(self):
+        self.archivo = open("./archivos/empleados.txt","r",encoding="utf8")
+        self.archivo_temporal = open("./archivos/empleados_temp.txt","w",encoding="utf8")
+
+        print("ID a modificar:\n")
+        self.id_change = input("ID:")
+
+        print("Nuevo ID\n")
+        self.idempleado = input("IDN:")
+
+        print("Nombre Nuevo:\n")
+        self.nombre = input("Nombre:")
+
+        print("Direccion Nueva:\n")
+        self.direccion = input("> ")
+
+        for renglon in self.archivo:
+            id = renglon.split("|")[0]
+            if self.id_change != id:
+                self.archivo_temporal.write(renglon)
+            elif self.id_change == id:
+                self.archivo_temp.write(self.idempleado + "|" + self.nombre + "|" + self.direccion + "\n")
+    
+        self.archivo.close()
+        self.archivo_temporal.close()
+
+        os.remove("./archivos/empleados.txt")
+        os.rename("./archivos/empleados_temp.txt","./archivos/empleados.txt")
+
